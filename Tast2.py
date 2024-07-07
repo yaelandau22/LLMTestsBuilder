@@ -21,7 +21,7 @@ if __name__ == "__main__":
     update_key_step = UpdateKeyPipelineStep(Task2Constants.VERIFICATION_ANSWER_KEY, Task2Constants.FINAL_ANSWER_KEY)
     extract_else_delete_value_step_first = ExtractElseDeleteValueStep(Task2Constants.FINAL_ANSWER_KEY, {Task2Constants.FINAL_ANSWER_KEY: Task2Constants.ANSWER_REGEX})
     extract_else_delete_value_step_second = ExtractElseDeleteValueStep(Task2Constants.VERIFICATION_ANSWER_KEY, {Task2Constants.VERIFICATION_ANSWER_KEY: Task2Constants.ANSWER_REGEX})
-    replace_value_step = ReplaceValueStep({'A': '0', 'B': '1'}, Task2Constants.FINAL_ANSWER_KEY)
+    replace_value_step = ReplaceValueStep(Task2Constants.ANSWER_TO_LABEL_MAP, Task2Constants.FINAL_ANSWER_KEY)
 
     equal_values_condition = EqualValuesStopCondition(Task2Constants.ANSWER_REGEX, Task2Constants.FINAL_ANSWER_KEY, Task2Constants.VERIFICATION_ANSWER_KEY)
     key_exist_condition_first = AtLeastOneKeyExistStopCondition([Task2Constants.FINAL_ANSWER_KEY])

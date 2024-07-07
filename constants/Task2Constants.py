@@ -28,3 +28,4 @@ class Task2Constants:
     INIT_KEYS = ["question_input", "sol_1", "sol_2"]
     DATA_FILE_PATH = 'data/train.jsonl'
     LABELS_FILE_PATH = 'data/train-labels.lst'
+    ANSWER_TO_LABEL_MAP = {'A': '0', 'B': '1'}

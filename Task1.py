@@ -11,7 +11,7 @@ from constants.Task1Constants import Task1Constants
 if __name__ == "__main__":
     model = GeminiModel(Task1Constants.GEMINI_MODEL_NAME)
     llmModelStep = LLMModelStep(model, Task1Constants.PROMPT_QUESTION_TEMPLATE, Task1Constants.FINAL_ANSWER_KEY)
-    replace_value_step = ReplaceValueStep({'A': '0', 'B': '1'}, Task1Constants.FINAL_ANSWER_KEY)
+    replace_value_step = ReplaceValueStep(Task1Constants.ANSWER_TO_LABEL_MAP, Task1Constants.FINAL_ANSWER_KEY)
     extract_value_step = ExtractElseDeleteValueStep(Task1Constants.FINAL_ANSWER_KEY, {Task1Constants.FINAL_ANSWER_KEY: Task1Constants.ANSWER_REGEX})
     key_exist_stop_condition = AtLeastOneKeyExistStopCondition([Task1Constants.FINAL_ANSWER_KEY])
     verification_pipeline = Pipeline([llmModelStep, extract_value_step])
