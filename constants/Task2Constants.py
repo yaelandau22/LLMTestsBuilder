@@ -1,7 +1,7 @@
 
 class Task2Constants:
     PROMPT_QUESTION_TEMPLATE = """
-        SYSTEM: I will give you a question or sentence to complete and two possible answers. Please answer either A or B, depending on which answer is better. You may write down your reasoning but please write your final answer (either A or B) between the <answer> and </answer> tags”
+        SYSTEM: I will give you a question or sentence to complete and two possible answers. Please answer either A or B, depending on which answer is better. You may write down your reasoning but please write your final answer (either A or B) between the <answer> and </answer> tags. ”
         QUESTION: {question_input}           
         OPTION A: {sol_1}
         OPTION B: {sol_2}

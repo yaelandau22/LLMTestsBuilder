@@ -33,7 +33,7 @@ if __name__ == "__main__":
     fork_step = ForkStep({Task3Constants.FINAL_ANSWER_KEY: None, Task3Constants.SEARCH_TERM_KEY: model_with_google_result_conditional_loop_step})
     pipeline = Pipeline([model_conditional_loop_step, fork_step, replace_value_step])
 
-    piqaTest = PIQATest(Task3Constants.DATA_FILE_PATH, Task3Constants.LABELS_FILE_PATH, 50, pipeline, Task3Constants.FINAL_ANSWER_KEY, Task3Constants.INIT_KEYS, seed=3)
+    piqaTest = PIQATest(Task3Constants.DATA_FILE_PATH, Task3Constants.LABELS_FILE_PATH, 50, pipeline, Task3Constants.FINAL_ANSWER_KEY, Task3Constants.INIT_KEYS)
     success_rate = piqaTest.run(should_log=True)
     print(f"success rate: {success_rate}")
 

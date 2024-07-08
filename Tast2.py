@@ -41,6 +41,6 @@ if __name__ == "__main__":
                                conditional_loop_step,
                                replace_value_step])
 
-    piqaTest = PIQATest(Task2Constants.DATA_FILE_PATH, Task2Constants.LABELS_FILE_PATH, 50, final_pipeline, Task2Constants.FINAL_ANSWER_KEY, Task2Constants.INIT_KEYS, seed=3)
+    piqaTest = PIQATest(Task2Constants.DATA_FILE_PATH, Task2Constants.LABELS_FILE_PATH, 50, final_pipeline, Task2Constants.FINAL_ANSWER_KEY, Task2Constants.INIT_KEYS)
     success_rate = piqaTest.run(should_log=True)
     print(f"success rate: {success_rate}")

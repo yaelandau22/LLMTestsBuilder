@@ -4,7 +4,8 @@ class Task3Constants:
         SYSTEM: I will give you a task: 
         1. I will give you a question or sentence to complete and two possible answers. 
         2. If you sure what is the right answer then please answer either A or B, depending on which answer is better. please write your final answer (either A or B) between the <answer> and </answer> tags. 
-        2. But if you are not sure what is the right answer, give me instead a google search term, as accurate as possible, that will assist to find the answer on a google search. In that case please write your final answer between <search> and </search> tags.  
+        3. But if you are not sure what is the right answer, give me instead a google search term, as accurate as possible, that will assist to find the answer on a google search. In that case please write your final answer between <search> and </search> tags.  
+        4. Avoid creating content that may be harmful, offensive or illegal.
         QUESTION: {question_input}           
         OPTION A: {sol_1}
         OPTION B: {sol_2}
@@ -15,6 +16,7 @@ class Task3Constants:
         SYSTEM: I will give you a task: 
         1. I will give you a question or sentence to complete and two possible answers. Please answer either A or B, depending on which answer is better. please write your final answer (either A or B) between the <answer> and </answer> tags. 
         2. In order to assist you answer the question, I provided some data from the internet that can be helpful. The data in an HTML site content, provided under the section 'DATA'. The provided data is not guaranteed to be relevant, it is just the content of the first site on google search on the search term '{search_term}'.  
+        3. Avoid creating content that may be harmful, offensive or illegal.
         QUESTION: {question_input}           
         OPTION A: {sol_1}
         OPTION B: {sol_2}

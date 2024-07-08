@@ -18,6 +18,6 @@ if __name__ == "__main__":
     conditional_loop_step = ConditionalLoopPipelineStep(verification_pipeline, key_exist_stop_condition, max_iterations=5)
     pipeline = Pipeline([conditional_loop_step, replace_value_step])
 
-    piqaTest = PIQATest(Task1Constants.DATA_FILE_PATH, Task1Constants.LABELS_FILE_PATH, 50, pipeline, Task1Constants.FINAL_ANSWER_KEY, Task1Constants.INIT_KEYS, seed=3)
+    piqaTest = PIQATest(Task1Constants.DATA_FILE_PATH, Task1Constants.LABELS_FILE_PATH, 50, pipeline, Task1Constants.FINAL_ANSWER_KEY, Task1Constants.INIT_KEYS)
     success_rate = piqaTest.run(should_log=True)
     print(f"success rate: {success_rate}")
