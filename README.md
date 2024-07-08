@@ -1,4 +1,4 @@
-# A proposed framework for building LLM piplines
+# Proposed framework for building LLM piplines
 The basic building blocks of piplines are:<br>
 * PipelineStep - perform a singel logical operation.
 * Pipeline - Perform a series of PipelineSteps.
